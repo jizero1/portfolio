@@ -1,10 +1,13 @@
 import './App.css';
 import { useState, useEffect, useCallback, useRef } from 'react';
 import React from 'react';
-// import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { motion } from 'framer-motion';
+import { MdOutlineMail } from "react-icons/md";
+
+import { FaGithub, FaSchool, FaPencilAlt, FaMousePointer } from "react-icons/fa";
+import { FaCakeCandles } from "react-icons/fa6";
+import { TbBrandReactNative } from "react-icons/tb";
+
 function App() {
 
   const MainContainer = () => {
@@ -64,9 +67,17 @@ function App() {
       }
     }, [isIntroVisible]);
 
+
+    const [img, setImg] = useState(null);
+    const ImgEnter = (id) => {
+      setImg(id);
+    }
+    const ImgLeave = () => {
+      setImg(null);
+    }
     return (
       <div className="about-container">
-        <p>ABOUT ME</p>
+        <p className="about-me">ABOUT ME</p>
         <motion.div
           ref={introRef}
           initial={{ opacity: 0, y: 100 }}
@@ -75,17 +86,52 @@ function App() {
           className="about-intro"
         >
           {/* 사진, 소개텍스트( 자기소개 )*/}
-          <div className="about-intro-img"></div>
+          <div className="about-intro-img">
+            <img src="./img/me.png"></img>
+          </div>
           <div className="about-intro-text">
             <div className="about-intro-name">
               <p>최지영</p>
               <p>Choi ji young</p>
             </div>
-            <p>🎉1999.01.06</p>
-            <p>🏫전주대학교 경영학과&스마트미디어학과</p>
-            <p>📧wlduddl4101@gmail.com</p>
-            <p>📝https://blog.naver.com/jibbbang2</p>
-            <p>💡https://github.com/jizero1</p>
+
+            <p><FaCakeCandles size="25" style={{ marginRight: '15px' }} />1999.01.06</p>
+            <p><FaSchool size="25" style={{ marginRight: '15px' }} /> 전주대학교 경영학과&스마트미디어학과</p>
+            <p><MdOutlineMail size="25" style={{ marginRight: '15px' }} />wlduddl4101@gmail.com</p>
+            <p><FaPencilAlt size="25" style={{ marginRight: '15px' }} />https://blog.naver.com/jibbbang2</p>
+            <p><FaGithub size="25" style={{ marginRight: '15px' }} /> https://github.com/jizero1</p>
+
+            <div className="about-intro-skill">
+              <div>
+                <FaMousePointer className="about-mouse"></FaMousePointer>
+              </div>
+              <div className="about-intro-skill-img">
+                <img src="./img/html.png" onMouseEnter={() => ImgEnter('img1')} onMouseLeave={ImgLeave}></img>
+                <img src="./img/css.png" onMouseEnter={() => ImgEnter('img2')} onMouseLeave={ImgLeave}></img>
+                <img src="./img/js.png" onMouseEnter={() => ImgEnter('img3')} onMouseLeave={ImgLeave}></img>
+                <img src="./img/react.png" onMouseEnter={() => ImgEnter('img4')} onMouseLeave={ImgLeave}></img>
+                <TbBrandReactNative size="50" color="#ADF3F4" style={{ marginRight: '7px' }} onMouseEnter={() => ImgEnter('img5')} onMouseLeave={ImgLeave} />
+                <img src="./img/nodejs.png" onMouseEnter={() => ImgEnter('img6')} onMouseLeave={ImgLeave}></img>
+              </div>
+              <div className="about-intro-skill-text" style={{ display: img === 'img1' ? 'block' : 'none' }}>
+                <p>HTML5의 구조적 마크업을 활용해 웹 페이지를 구성 할 수 있습니다. 시맨틱 태그와 웹 접근성을 고려한 웹 페이지를 구현 할 수 있습니다.</p>
+              </div>
+              <div className="about-intro-skill-text" style={{ display: img === 'img2' ? 'block' : 'none' }}>
+                <p>CSS3을 사용하여 레이아웃 구축, css 애니메이션 및 트랜지션을 적용한 동적인 스타일링을 구현 할 수 있습니다. 또한 반응형 디자인을 위해 미디어쿼리를 잘 활용 할 수 있습니다.</p>
+              </div>
+              <div className="about-intro-skill-text" style={{ display: img === 'img3' ? 'block' : 'none' }}>
+                <p>다양한 JavaScript 기능을 활용하여 동적인 웹 어플리케이션을 개발 할 수 있습니다. 이벤트 핸들링, localStorage 등을 효율적으로 사용 할 수 있습니다.</p>
+              </div>
+              <div className="about-intro-skill-text" style={{ display: img === 'img4' ? 'block' : 'none' }}>
+                <p>React를 활용하여 상태 관리 및 컴포넌트 기반의 UI를 개발 할 수 있습니다. Router, Hoods, Context API등을 사용하여 SPA(Single Page Application)를 구현 할 수 있습니다.</p>
+              </div>
+              <div className="about-intro-skill-text" style={{ display: img === 'img5' ? 'block' : 'none' }}>
+                <p>React Natvie의 기본적인 UI 구성과 네이티브 모듈을 활영한 기능 구현이 가능하고, 상태관리 및 컴포넌트 기반의 구조를 이해하고 있습니다.</p>
+              </div>
+              <div className="about-intro-skill-text" style={{ display: img === 'img6' ? 'block' : 'none' }}>
+                <p>Node.js를 사용하여 서버측 로직을 구현한 경험이 있으며, 기본적인 API를 개발 할 수 있습니다. 현재는 고급 개념이나 서버최적화, 데이터베이스 연동 등은 학습이 필요한 상태입니다.</p>
+              </div>
+            </div>
           </div>
         </motion.div>
         <motion.div
@@ -95,8 +141,23 @@ function App() {
           transition={{ duration: 1 }}
           className="about-text"
         >
-          {/* 기술스택 */}
-          <div>ddd</div>
+          <div className="about-text-div">
+            <p className="about-text-text">
+
+              <strong>경영학</strong>을 전공하던 중 HTML 기초 강의를 수강 했던 적이 있었는데,
+              이때 머릿속의 아이디어를 화면에 구현 할 수 있다는 점에
+              매력을 느껴 <strong>프론트엔드 개발자</strong>라는 꿈을 가지게 되었습니다.
+              이를 실현하기 위해 <strong>스마트미디어학과</strong>를 복수 전공하며 개발에 대한 이해를 쌓았습니다.
+              <br></br>
+              <br></br>
+              꾸준히 <strong>성장</strong>하고 새로운 것에 <strong>도전</strong>하는 것을 좋아하여 
+              최근에는 React Native를 독학으로 배우고,
+              Play Store에 앱을 등록하고 비공개 테스트 심사를 진행 중입니다.
+              사용자 경험을 고려한 실용적이고 효율적인 개발을 통해 꾸준히 성장하는
+              프론트엔드 개발자가 되겠습니다.
+            </p>
+            {/* <p className="about-text-aboutText">ABOUT ME</p> */}
+          </div>
         </motion.div>
       </div>
     )
@@ -104,7 +165,7 @@ function App() {
 
   const ProjectContainer = () => {
     return (
-      <div>
+      <div className="project-container">
 
       </div>
     )

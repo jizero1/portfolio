@@ -2,9 +2,9 @@ import './App.css';
 import { useState, useEffect, useCallback, useRef } from 'react';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MdOutlineMail } from "react-icons/md";
+import { MdOutlineMail, MdComputer } from "react-icons/md";
 
-import { FaGithub, FaSchool, FaPencilAlt, FaMousePointer } from "react-icons/fa";
+import { FaGithub, FaSchool, FaPencilAlt, FaMousePointer, FaMouse } from "react-icons/fa";
 import { FaCakeCandles } from "react-icons/fa6";
 import { TbBrandReactNative } from "react-icons/tb";
 
@@ -14,9 +14,9 @@ function App() {
     return (
       <div className="main-container">
         <div className="main-text">
-          <p>CHOI JIYOUNG</p>
-          <p>Front-end Developer</p>
-          <p>Portfolio</p>
+          <p className="main-name">CHOI JIYOUNG</p>
+          <p className="main-front">Front-end Developer</p>
+          <p className="main-portfolio">Portfolio</p>
         </div>
         <div className="main-circle">
           <div className="circle">
@@ -63,7 +63,7 @@ function App() {
       if (isIntroVisible) { // 첫번째 intro요소 등장후, 두번째 text 등장시키기
         setTimeout(() => {
           setIsTextVisible(true);
-        }, 1000);
+        }, 700);
       }
     }, [isIntroVisible]);
 
@@ -92,14 +92,14 @@ function App() {
           <div className="about-intro-text">
             <div className="about-intro-name">
               <p>최지영</p>
-              <p>Choi ji young</p>
+              <p>CHOI JIYOUNG</p>
             </div>
 
-            <p><FaCakeCandles size="25" style={{ marginRight: '15px' }} />1999.01.06</p>
-            <p><FaSchool size="25" style={{ marginRight: '15px' }} /> 전주대학교 경영학과&스마트미디어학과</p>
-            <p><MdOutlineMail size="25" style={{ marginRight: '15px' }} />wlduddl4101@gmail.com</p>
-            <p><FaPencilAlt size="25" style={{ marginRight: '15px' }} />https://blog.naver.com/jibbbang2</p>
-            <p><FaGithub size="25" style={{ marginRight: '15px' }} /> https://github.com/jizero1</p>
+            <p><FaCakeCandles size="20" style={{ marginRight: '15px' }} />1999.01.06</p>
+            <p><FaSchool size="20" style={{ marginRight: '15px' }} /> 전주대학교 경영학과&스마트미디어학과</p>
+            <p><MdOutlineMail size="20" style={{ marginRight: '15px' }} />wlduddl4101@gmail.com</p>
+            <p><FaPencilAlt size="20" style={{ marginRight: '15px' }} />https://blog.naver.com/jibbbang2</p>
+            <p><FaGithub size="20" style={{ marginRight: '15px' }} /> https://github.com/jizero1</p>
 
             <div className="about-intro-skill">
               <div>
@@ -110,7 +110,7 @@ function App() {
                 <img src="./img/css.png" onMouseEnter={() => ImgEnter('img2')} onMouseLeave={ImgLeave}></img>
                 <img src="./img/js.png" onMouseEnter={() => ImgEnter('img3')} onMouseLeave={ImgLeave}></img>
                 <img src="./img/react.png" onMouseEnter={() => ImgEnter('img4')} onMouseLeave={ImgLeave}></img>
-                <TbBrandReactNative size="50" color="#ADF3F4" style={{ marginRight: '7px' }} onMouseEnter={() => ImgEnter('img5')} onMouseLeave={ImgLeave} />
+                <TbBrandReactNative size="50" color="#ADF3F4" onMouseEnter={() => ImgEnter('img5')} onMouseLeave={ImgLeave} />
                 <img src="./img/nodejs.png" onMouseEnter={() => ImgEnter('img6')} onMouseLeave={ImgLeave}></img>
               </div>
               <div className="about-intro-skill-text" style={{ display: img === 'img1' ? 'block' : 'none' }}>
@@ -150,7 +150,7 @@ function App() {
               이를 실현하기 위해 <strong>스마트미디어학과</strong>를 복수 전공하며 개발에 대한 이해를 쌓았습니다.
               <br></br>
               <br></br>
-              꾸준히 <strong>성장</strong>하고 새로운 것에 <strong>도전</strong>하는 것을 좋아하여 
+              꾸준히 <strong>성장</strong>하고 새로운 것에 <strong>도전</strong>하는 것을 좋아하여
               최근에는 React Native를 독학으로 배우고,
               Play Store에 앱을 등록하고 비공개 테스트 심사를 진행 중입니다.
               사용자 경험을 고려한 실용적이고 효율적인 개발을 통해 꾸준히 성장하는
@@ -163,10 +163,100 @@ function App() {
     )
   }
 
-  const ProjectContainer = () => {
+  const projectData = [
+    {
+      number: 1, 
+      name: "실시간 날씨 🌤",
+      developer: "최지영",
+      date: "2024.12.29 ~ 2025.01.04",
+      skill: "HTML / CSS / JavaScript / Node.js",
+      description: "OpenWeather API를 이용하여 실시간으로 날씨정보를제공받아 사용자의 위치 기반으로 날씨정보를 표시합니다. 사용자의 이해를 돕기 위해 날씨 상태코드에 맞게 날씨 이모티콘을 적절하게 표시하고, 날씨 텍스트(ex.맑음)도 추가했습니다. node.js를 이용하여 실시간으로 날씨정보를 제공하는 서버를 구축 했고, vercel을 통해 배포를 완료 하였습니다.",
+      image: "./img/project1.png",
+      projectLink: "https://weather-project-peach-xi.vercel.app/",
+      github: "https://github.com/jizero1/weather",
+    },
+    {
+      number: 2,
+      name: "달력 일기 📝",
+      developer: "최지영",
+      date: "2024.12.17 ~ 2025.12.26",
+      skill: "HTML / CSS / JavaScript",
+      description: "달력의 기본 기능인 현재 날짜 확인, 이전달/다음달 이동 뿐만 아니라 해당 날짜를 클릭하면 이미지와 메모를 작성 할 수 있습니다. 또한, 입력된 내용들은 localStorage에 저장되어 페이지를 새로고침 하더라도 계속해서 확인이 가능 합니다.",
+      image: "./img/project2.png",
+      projectLink: "https://jizero1.github.io/CalendarDiary/",
+      github: "https://github.com/jizero1/CalendarDiary",
+    },
+    {
+      number: 3,
+      name: "하루 토마토🍅",
+      developer: "최지영",
+      date: "2025.01.09 ~ 진행중",
+      skill: "React Native / JavaScript",
+      description: "할일 추가 및 체크기능으로 할일을 간단하게 관리할 수 있고, 중요한 할일은 5가지 색상의 인덱스로 표시해주어 체계적으로 일정 관리가 가능합니다. 또한, 5가지의 기분 아이콘을 통해 사용자는 하루의 기분을 체크할 수 있습니다.",
+      image: "./img/project2.png",
+      projectLink: "",
+      github: "https://github.com/jizero1/todo",
+    }
+  ]
+
+  const ProjectContainer = ({project}) => {
+
+    const [isProjectVisible, setIsProjectVisible] = useState(false);
+    const project1Ref = useRef(null);
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) { // 뷰포트에 얼마나 보이는지 확인
+            setIsProjectVisible(true); // 화면에 보이게함
+          }
+        },
+        { threshold: 0.5 } // 요소가 50퍼 이상 보일때 애니메이션 시작
+      );
+
+      if (project1Ref.current) { // 화면에 보이거나 보이지 않을때
+        observer.observe(project1Ref.current); // 요소관찰 시작
+      }
+
+      return () => {
+        if (project1Ref.current) {
+          observer.unobserve(project1Ref.current); // 요소관찰 중단
+        }
+      };
+    }, []);
+
     return (
       <div className="project-container">
+        <p className="project-sideText">PROJECT</p>
+        <motion.div
+          ref={project1Ref}
+          initial={{ opacity: 0, y: 100 }}
+          animate={isProjectVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="project"
+        >
 
+          <div className="project-imgBox">
+            <p className="project-imgBox-number">#{project.number}</p>
+            <a href={project.projectLink} target="_blank"><img src={project.image}></img></a>
+            {/* <FaMouse size="20" className="project-mouse"></FaMouse> */}
+          </div>
+          <div className="project-textBox">
+            <div className="project-text">
+              {/* <p><strong>#개발자</strong>최지영</p> */}
+              <p className="project-text-common"><span># 프로젝트명</span>{project.name}</p>
+              <p className="project-text-common"><span># 개발자</span>{project.developer}</p>
+              <p className="project-text-common"><span># 개발기간</span>{project.date}</p>
+              <p className="project-text-common"><span># 사용기술</span>{project.skill}</p>
+              <div className="project-about-div">
+                <p className="project-about">{project.description}</p>
+              </div>
+            </div>
+            <div className="project-link">
+            <a href={project.github} target="_blank"><FaGithub size="30" className="project-link-icon"></FaGithub></a>
+            <a href={project.projectLink} target="_blank"><MdComputer size="30"  className="project-link-icon"></MdComputer></a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     )
   }
@@ -174,7 +264,9 @@ function App() {
     <div className="container">
       <MainContainer></MainContainer>
       <AboutContainer></AboutContainer>
-      <ProjectContainer></ProjectContainer>
+      {projectData.map((project) => (
+        <ProjectContainer key={project.number} project={project}></ProjectContainer>
+      ))}
     </div>
   );
 }

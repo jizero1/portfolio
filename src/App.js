@@ -2,34 +2,32 @@ import './App.css';
 import { useState, useEffect, useCallback, useRef } from 'react';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MdOutlineMail, MdComputer } from "react-icons/md";
+import { MdOutlineMail, MdComputer,MdModeNight, MdWbSunny } from "react-icons/md";
 
-import { FaGithub, FaSchool, FaPencilAlt, FaMousePointer, FaMouse } from "react-icons/fa";
+import { FaGithub, FaSchool, FaPencilAlt, FaMousePointer, FaCertificate } from "react-icons/fa";
 import { FaCakeCandles } from "react-icons/fa6";
 import { TbBrandReactNative } from "react-icons/tb";
+// import { TiWeatherNight } from "react-icons/ti";
 
 function App() {
 
-  const MainContainer = () => {
-    return (
-      <div className="main-container">
-        <div className="main-text">
-          <p className="main-name">CHOI JIYOUNG</p>
-          <p className="main-front">Front-end Developer</p>
-          <p className="main-portfolio">Portfolio</p>
-        </div>
-        <div className="main-circle">
-          <div className="circle">
-            <div className="circle-box"></div>
-          </div>
-        </div>
 
+
+  const MainContainer = ({darkLightClick}) => {
+    return (
+      <div className="main-container"  style={ darkLightClick ? { backgroundColor: "rgb(26, 28, 48)"} : {backgroundColor: "white"}}>
+        <div className="main-circle" style={ darkLightClick ? { background: "linear-gradient(to left,rgb(38, 46, 87),rgb(239, 248, 255))"} : {background: "linear-gradient(to top, #a0a7ca, #fcfafe)"}}></div>
+        <div className="main-text">
+          <p className="main-name"  style={ darkLightClick ? { color: "rgb(229, 232, 253)"} : {color: "rgb(127, 142, 240)"}}><span>C</span>HOI <span>J</span>IYOUNG</p>
+          <p className="main-front" style={ darkLightClick ? { color: "rgb(229, 232, 253)"} : {color: "rgb(127, 142, 240)"}}>Front-end Developer</p>
+          <p className="main-portfolio" style={ darkLightClick ? { color: "rgb(229, 232, 253)"} : {color: "rgb(127, 142, 240)"}}>Portfolio</p>
+        </div>
       </div>
     )
   }
 
 
-  const AboutContainer = () => {
+  const AboutContainer = ({darkLightClick}) => {
 
     const [isIntroVisible, setIsIntroVisible] = useState(false);
     const [isTextVisible, setIsTextVisible] = useState(false);
@@ -76,8 +74,8 @@ function App() {
       setImg(null);
     }
     return (
-      <div className="about-container">
-        <p className="about-me">ABOUT ME</p>
+      <div className="about-container" style={ darkLightClick ? { backgroundColor: "rgb(26, 28, 48)", color: "white"} : {backgroundColor: "white"}}>
+        <p className="about-me" style={ darkLightClick ? { color: "rgb(226, 240, 253)"} : {}}>ABOUT ME</p>
         <motion.div
           ref={introRef}
           initial={{ opacity: 0, y: 100 }}
@@ -97,9 +95,11 @@ function App() {
 
             <p><FaCakeCandles size="20" style={{ marginRight: '15px' }} />1999.01.06</p>
             <p><FaSchool size="20" style={{ marginRight: '15px' }} /> 전주대학교 경영학과&스마트미디어학과</p>
+            <p><FaCertificate size="20" style={{ marginRight: '15px' }}></FaCertificate>2023.06 정보처리기사 자격증 취득</p>
             <p><MdOutlineMail size="20" style={{ marginRight: '15px' }} />wlduddl4101@gmail.com</p>
             <p><FaPencilAlt size="20" style={{ marginRight: '15px' }} />https://blog.naver.com/jibbbang2</p>
             <p><FaGithub size="20" style={{ marginRight: '15px' }} /> https://github.com/jizero1</p>
+
 
             <div className="about-intro-skill">
               <div>
@@ -165,7 +165,7 @@ function App() {
 
   const projectData = [
     {
-      number: 1, 
+      number: 1,
       name: "실시간 날씨 🌤",
       developer: "최지영",
       date: "2024.12.29 ~ 2025.01.04",
@@ -192,14 +192,25 @@ function App() {
       developer: "최지영",
       date: "2025.01.09 ~ 진행중",
       skill: "React Native / JavaScript",
-      description: "할일 추가 및 체크기능으로 할일을 간단하게 관리할 수 있고, 중요한 할일은 5가지 색상의 인덱스로 표시해주어 체계적으로 일정 관리가 가능합니다. 또한, 5가지의 기분 아이콘을 통해 사용자는 하루의 기분을 체크할 수 있습니다.",
-      image: "./img/project2.png",
+      description: "할일 추가 및 체크기능으로 할일을 간단하게 관리할 수 있고, 중요한 할일은 인덱스로 표시해주어 체계적으로 일정 관리가 가능합니다. 또한, 5가지의 색상과 표정의 기분 아이콘을 통해 하루의 기분을 표시할 수 있습니다.",
+      image: "./img/project3.png",
       projectLink: "",
       github: "https://github.com/jizero1/todo",
+    },
+    {
+      number: 4,
+      name: "포트폴리오",
+      developer: "최지영",
+      date: "2025.01.24 ~ 진행중",
+      skill: "React, css",
+      description: "",
+      image: "",
+      projectLink: "",
+      github: "https://github.com/jizero1/portfolio",
     }
   ]
 
-  const ProjectContainer = ({project}) => {
+  const ProjectContainer = ({ project,darkLightClick }) => {
 
     const [isProjectVisible, setIsProjectVisible] = useState(false);
     const project1Ref = useRef(null);
@@ -225,8 +236,8 @@ function App() {
     }, []);
 
     return (
-      <div className="project-container">
-        <p className="project-sideText">PROJECT</p>
+      <div className="project-container" style={ darkLightClick ? { backgroundColor: "rgb(26, 28, 48)", color: "white"} : {backgroundColor: "white"}}>
+        <p className="project-sideText" style={ darkLightClick ? { color: "rgb(226, 240, 253)"} : {}}>PROJECT #{project.number}</p>
         <motion.div
           ref={project1Ref}
           initial={{ opacity: 0, y: 100 }}
@@ -247,25 +258,44 @@ function App() {
               <p className="project-text-common"><span># 개발자</span>{project.developer}</p>
               <p className="project-text-common"><span># 개발기간</span>{project.date}</p>
               <p className="project-text-common"><span># 사용기술</span>{project.skill}</p>
-              <div className="project-about-div">
+              <div className="project-about-div" style={ darkLightClick ? {color: "black"} : {}}>
                 <p className="project-about">{project.description}</p>
               </div>
             </div>
             <div className="project-link">
-            <a href={project.github} target="_blank"><FaGithub size="30" className="project-link-icon"></FaGithub></a>
-            <a href={project.projectLink} target="_blank"><MdComputer size="30"  className="project-link-icon"></MdComputer></a>
+              <a href={project.github} target="_blank"><FaGithub size="30" className="project-link-icon" style={ darkLightClick ? { color: "white"} : {}}></FaGithub></a>
+              <a href={project.projectLink} target="_blank"><MdComputer size="30" className="project-link-icon" style={ darkLightClick ? { color: "white"} : {}}></MdComputer></a>
             </div>
           </div>
         </motion.div>
       </div>
     )
   }
+
+
+  const [darkLightClick, setDarkLightClick] = useState(false);
+  const [darkLightIcon, setDarkLightIcon] = useState(<MdWbSunny></MdWbSunny>);
+    const darkLightToggle = () => {
+      setDarkLightClick(!darkLightClick);
+      if (darkLightClick) { // 버튼클릭시 darkLightClick은 true가 되어 다크모드가 됨.
+        setDarkLightIcon(<MdModeNight></MdModeNight>);
+      } else {
+        setDarkLightIcon(<MdWbSunny></MdWbSunny>);
+      }
+
+    }
+    
   return (
     <div className="container">
-      <MainContainer></MainContainer>
-      <AboutContainer></AboutContainer>
+      <div className="darkLight-container" onClick={darkLightToggle}>
+        <div className="darkLight-btn" style={darkLightClick ? {backgroundColor: "white"} : {}}>
+          <div className="darkLight-btn-Icon" style={darkLightClick ? {color: "rgb(33, 63, 92)"} : {}}>{darkLightIcon}</div>
+        </div>
+      </div>
+      <MainContainer darkLightClick={darkLightClick}></MainContainer>
+      <AboutContainer darkLightClick={darkLightClick}></AboutContainer>
       {projectData.map((project) => (
-        <ProjectContainer key={project.number} project={project}></ProjectContainer>
+        <ProjectContainer darkLightClick={darkLightClick} key={project.number} project={project}></ProjectContainer>
       ))}
     </div>
   );

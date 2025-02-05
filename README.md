@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+## 프로젝트명 [ 최지영의 포트폴리오 ]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 설명
+자기소개 및 개발한 프로젝트를 소개하기 위해 제작된 웹 포트폴리오 입니다.
+이 포트폴리오에서는 개인정보, 학력, 자격증, 기술스택을 소개하고, 진행했던 프로젝트를
+노트북이미지안에 넣어 시각적으로 프로젝트가 잘 보이도록 하였습니다.
+Framer Motion을 이용한 애니메이션 효과를 활영해 사용자 경험을 향상 시켰고,
+다크모드와 라이트모드를 지원하여 사용자 맞춤 환경을 제공합니다.
 
-## Available Scripts
+## 프로젝트 링크
 
-In the project directory, you can run:
+## 개발자
+최지영
 
-### `npm start`
+## 개발기간
+2025.01.24 ~ 진행중
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 주요 기능
+1. 다크모드 / 라이트모드
+우측 상단에 버튼을 클릭하여 배경과 글자색이 동적으로 변경되도록 하였습니다.
+2. 자기소개 및 기술스택
+자기소개 및 기술 스택을 아이콘과 함께 시각적으로 표현하였고, 기술스택 아이콘에 마우스를
+올리면 어느정도 학습 되었는지 텍스트로 표시합니다.
+3. 프로젝트 소개
+노트북 이미지에 프로젝트 이미지를 넣어 시각적으로 프로젝트를 표현 하였습니다.
+GitHub 링크와 프로젝트 링크를 통해 프로젝트에 대하 자세한 정보 확인도 가능 합니다.
+4. Intersection Observer 애니메이션
+페이지 스크롤에 따라 요소들이 화면에 나타날 때 애니메이션을 주어 사용자경험을 향상시켰습니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 기술 스택
+React : 컴포넌트 기반의 UI 개발을 위해 사용
+Framer Motion : 애니메이션 및 트랜지션 효과구현
+CSS : 웹 페이지의 레이아웃과 스타일링
+JavaScript : 동적 기능 추가
+React Icons : 아이콘을 추가하기위해 사용
+   
+## 추가 및 수정하고자 하는 기능
+- 반응형 디자인
+- 메인화면 애니메이션

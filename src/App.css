@@ -343,7 +343,7 @@
 /* -------------------------- 반응형 처리 ------------------------- */
 @media (max-width: 768px) {
   .darkLight-container { height: 70px; }
-  .darkLight-btn { margin-right: 10px; width: 40px; height: 40px; }
+  .darkLight-btn { margin-right: 20px; width: 40px; height: 40px; }
   .darkLight-btn-Icon { font-size: 20px;}
   
   .main-circle { width: 250px; height: 250px; left: auto; right: auto; top: auto; bottom: auto;}
@@ -382,7 +382,8 @@
   .project-about-div { padding: 15px; }
   .project-about { line-height: 23px;}
   .project-link-icon { width: 25px; }
-  .project3 { top: -25px; }
+  .project3 { top: -40px; }
   .project-textBox3 { margin-top: 60px; }
+
   .footer-container { height: 35px; font-size: 12px;}
 }

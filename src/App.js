@@ -16,11 +16,11 @@ function App() {
   const MainContainer = ({ darkLightClick }) => {
     return (
       <div className="main-container" style={darkLightClick ? { backgroundColor: "rgb(26, 28, 48)" } : { backgroundColor: "white" }}>
-        <div className="main-circle" style={darkLightClick ? { background: "linear-gradient(to left,rgb(38, 46, 87),rgb(239, 248, 255))" } : { background: "linear-gradient(to top, #a0a7ca, #fcfafe)" }}></div>
+        <div className="main-circle" style={darkLightClick ? { background: "linear-gradient(to left,rgb(36, 45, 90),rgb(205, 225, 240))" } : { background: "linear-gradient(to top, #a0a7ca, #fcfafe)" }}></div>
         <div className="main-text">
-          <p className="main-name" style={darkLightClick ? { color: "rgb(229, 232, 253)" } : { color: "rgb(127, 142, 240)" }}><span>C</span>HOI <span>J</span>IYOUNG</p>
-          <p className="main-front" style={darkLightClick ? { color: "rgb(229, 232, 253)" } : { color: "rgb(127, 142, 240)" }}>Front-end Developer</p>
-          <p className="main-portfolio" style={darkLightClick ? { color: "rgb(229, 232, 253)" } : { color: "rgb(127, 142, 240)" }}>Portfolio</p>
+          <p className="main-name" style={darkLightClick ? { color: "rgb(226, 240, 253)" } : { color: "rgb(127, 142, 240)" }}><span>C</span>HOI <span>J</span>IYOUNG</p>
+          <p className="main-front" style={darkLightClick ? { color: "rgb(226, 240, 253)" } : { color: "rgb(127, 142, 240)" }}>Front-end Developer</p>
+          <p className="main-portfolio" style={darkLightClick ? { color: "rgb(226, 240, 253)" } : { color: "rgb(127, 142, 240)" }}>Portfolio</p>
         </div>
       </div>
     )

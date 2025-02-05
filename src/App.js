@@ -94,12 +94,12 @@ function App() {
               <p>CHOI JIYOUNG</p>
             </div>
 
-            <p><FaCakeCandles size="20" style={{ marginRight: '15px' }} />1999.01.06</p>
-            <p><FaSchool size="20" style={{ marginRight: '15px' }} /> 전주대학교 경영학과&스마트미디어학과</p>
-            <p><FaCertificate size="20" style={{ marginRight: '15px' }}></FaCertificate>2023.06 정보처리기사 자격증 취득</p>
-            <p><MdOutlineMail size="20" style={{ marginRight: '15px' }} />wlduddl4101@gmail.com</p>
-            <p><FaPencilAlt size="20" style={{ marginRight: '15px' }} />https://blog.naver.com/jibbbang2</p>
-            <p><FaGithub size="20" style={{ marginRight: '15px' }} /> https://github.com/jizero1</p>
+            <p><FaCakeCandles size="20" style={{ marginRight: '15px' }} className="about-intro-icon"/>1999.01.06</p>
+            <p><FaSchool size="20" style={{ marginRight: '15px' }} className="about-intro-icon"/> 전주대학교 경영학과&스마트미디어학과</p>
+            <p><FaCertificate size="20" style={{ marginRight: '15px' }} className="about-intro-icon"></FaCertificate>2023.06 정보처리기사 자격증 취득</p>
+            <p><MdOutlineMail size="20" style={{ marginRight: '15px' }} className="about-intro-icon"/>wlduddl4101@gmail.com</p>
+            <p><FaPencilAlt size="20" style={{ marginRight: '15px' }}className="about-intro-icon" />https://blog.naver.com/jibbbang2</p>
+            <p><FaGithub size="20" style={{ marginRight: '15px' }}className="about-intro-icon" /> https://github.com/jizero1</p>
 
 
             <div className="about-intro-skill">
@@ -111,7 +111,7 @@ function App() {
                 <img src="./img/css.png" onMouseEnter={() => ImgEnter('img2')} onMouseLeave={ImgLeave}></img>
                 <img src="./img/js.png" onMouseEnter={() => ImgEnter('img3')} onMouseLeave={ImgLeave}></img>
                 <img src="./img/react.png" onMouseEnter={() => ImgEnter('img4')} onMouseLeave={ImgLeave}></img>
-                <TbBrandReactNative size="50" color="#ADF3F4" onMouseEnter={() => ImgEnter('img5')} onMouseLeave={ImgLeave} />
+                <TbBrandReactNative className="about-intro-skill-img-reactNative" size="50" color="#ADF3F4" onMouseEnter={() => ImgEnter('img5')} onMouseLeave={ImgLeave} />
                 <img src="./img/nodejs.png" onMouseEnter={() => ImgEnter('img6')} onMouseLeave={ImgLeave}></img>
               </div>
               <div className="about-intro-skill-text" style={{ display: img === 'img1' ? 'block' : 'none' }}>

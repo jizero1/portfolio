@@ -7,12 +7,12 @@ import { MdOutlineMail, MdComputer,MdModeNight, MdWbSunny } from "react-icons/md
 import { FaGithub, FaSchool, FaPencilAlt, FaMousePointer, FaCertificate } from "react-icons/fa";
 import { FaCakeCandles } from "react-icons/fa6";
 import { TbBrandReactNative } from "react-icons/tb";
-// import { TiWeatherNight } from "react-icons/ti";
 
 function App() {
 
 
 
+  // ------------------ 메인 화면 ----------------
   const MainContainer = ({darkLightClick}) => {
     return (
       <div className="main-container"  style={ darkLightClick ? { backgroundColor: "rgb(26, 28, 48)"} : {backgroundColor: "white"}}>
@@ -27,6 +27,7 @@ function App() {
   }
 
 
+  // ------------------ 자기소개 화면 ----------------
   const AboutContainer = ({darkLightClick}) => {
 
     const [isIntroVisible, setIsIntroVisible] = useState(false);
@@ -83,7 +84,7 @@ function App() {
           transition={{ duration: 1 }}
           className="about-intro"
         >
-          {/* 사진, 소개텍스트( 자기소개 )*/}
+
           <div className="about-intro-img">
             <img src="./img/me.png"></img>
           </div>
@@ -156,7 +157,6 @@ function App() {
               사용자 경험을 고려한 실용적이고 효율적인 개발을 통해 꾸준히 성장하는
               프론트엔드 개발자가 되겠습니다.
             </p>
-            {/* <p className="about-text-aboutText">ABOUT ME</p> */}
           </div>
         </motion.div>
       </div>
@@ -210,6 +210,8 @@ function App() {
     }
   ]
 
+
+  // ------------------ 프로젝트 소개 화면 ----------------
   const ProjectContainer = ({ project,darkLightClick }) => {
 
     const [isProjectVisible, setIsProjectVisible] = useState(false);
@@ -249,11 +251,9 @@ function App() {
           <div className="project-imgBox">
             <p className="project-imgBox-number">#{project.number}</p>
             <a href={project.projectLink} target="_blank"><img src={project.image}></img></a>
-            {/* <FaMouse size="20" className="project-mouse"></FaMouse> */}
           </div>
           <div className="project-textBox">
             <div className="project-text">
-              {/* <p><strong>#개발자</strong>최지영</p> */}
               <p className="project-text-common"><span># 프로젝트명</span>{project.name}</p>
               <p className="project-text-common"><span># 개발자</span>{project.developer}</p>
               <p className="project-text-common"><span># 개발기간</span>{project.date}</p>

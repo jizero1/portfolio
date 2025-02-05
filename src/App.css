@@ -9,15 +9,11 @@
 .container {
   width: 100%;
   height: 100vh;
-  /* font-family: "Nanum Gothic", serif; */
   font-family: "Noto Sans KR", serif;
-  /* position:relative; */
-  /* background-color: white; */
 }
 .darkLight-container {
   width: 100%;
   height: 100px;
-  /* background-color: grey; */
   position: fixed;
   z-index: 999;
   display: flex;
@@ -34,20 +30,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* display: flex; */
-  /* flex-direction: ; */
 }
 .darkLight-btn-Icon {
   font-size: 30px;
   color: white;
 }
-/* -------------------------- 메인 ------------------------- */
+/* -------------------------- 메인 화면 ------------------------- */
 .main-container {
   width: 100%;
   height: 100vh;
-  /* background-color: rgb(186, 186, 247); */
-  /* background-color: rgb(44, 53, 116); */
-  /* color: rgb(127, 142, 240); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,61 +60,37 @@
   width: 55%;
   font-family: "Black Han Sans", serif;
   text-align: center;
-  /* z-index: 10; */
 }
 
 .main-name {
   font-size: 100px;
   margin-bottom: 30px;
-  /* font-weight: 800; */
   color: rgb(127, 142, 240);
 }
 .main-name span {
   font-size: 120px;
-  /* transform: rotate(-10deg); */
-  /* color: rgb(66, 77, 134); */
 }
 .main-front {
   font-size: 60px;
-  /* font-weight: 600; */
   color: rgb(127, 142, 240);
 }
 
 .main-portfolio {
   font-size: 60px;
-  /* font-weight: 600; */
   color: rgb(127, 142, 240);
 }
-
-/* .main-circle {
-  width: 420px;
-  height: 420px;
-}
-
-.circle {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  background-color: lightgrey;
-  overflow: hidden;
-  position: relative;
-} */
-
 .circle-box {
   width: 100%;
   height: 100px;
-  /* background-color: grey; */
   position: absolute;
   bottom: 0;
 }
 
 
-/* -------------------------- about ------------------------- */
+/* -------------------------- 자기소개 화면 ------------------------- */
 .about-container {
   width: 100%;
   height: 100vh;
-  /* background-color: white; */
-  /* font-size: 60px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -135,8 +102,6 @@
   color: rgb(191, 198, 244);
   position: absolute;
   left: 30px;
-  /* top: 30px; */
-  /* bottom: 50px; */
   font-size: 70px;
   font-family: "Black Han Sans", serif;
   writing-mode: vertical-lr;
@@ -146,7 +111,6 @@
 .about-intro {
   width: 90%;
   height: 50%;
-  /* background-color: blue; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,7 +141,6 @@
   font-size: 17px;
   margin-bottom: 5px;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
 
 }
@@ -204,10 +167,8 @@
   width: 330px;
   margin-top: 25px;
   position: relative;
-  /* background-color: yellow; */
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
 }
 
 .about-mouse {
@@ -215,8 +176,6 @@
   transform: rotate(80deg);
   animation: mouseAni 1s ease-in-out infinite;
   position: absolute;
-  /* z-index: 1; */
-
 }
 
 @keyframes mouseAni {
@@ -229,30 +188,20 @@
   50% {
     opacity: 1;
     bottom: 5px;
-    /* 첫 번째 반동 */
     left: 10px;
-    /* 첫 번째 반동 위치 */
   }
 
   100% {
     opacity: 1;
     bottom: 0px;
-    /* 최종 위치 */
     left: 0px;
-    /* 최종 위치 */
   }
 
 }
 
 .about-intro-skill-img {
-  /* margin-right: 10px; */
   cursor: pointer;
 }
-
-.about-intro-skill-img p {
-  /* margin-right: 100px; */
-}
-
 .about-intro-skill-text {
   width: 380px;
   height: 150px;
@@ -281,37 +230,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: grey; */
 }
-
-/* .about-text-text {
-  width: 100%;
-  height
-} */
 .about-text-div {
   width: 80%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
 }
-
 .about-text-text {
   font-size: 18px;
   letter-spacing: 1px;
 }
-
 .about-text-text strong {
   font-size: 19px;
 }
 
 
+/* -------------------------- 프로젝트 소개 ------------------------- */
 .project-container {
   width: 100%;
   height: 100vh;
-  /* background-color: white; */
-  /* font-size: 60px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -323,8 +258,6 @@
   color: rgb(191, 198, 244);
   position: absolute;
   left: 30px;
-  /* top: 30px; */
-  /* bottom: 50px; */
   font-size: 70px;
   font-family: "Black Han Sans", serif;
   writing-mode: vertical-lr;
@@ -334,7 +267,6 @@
 .project {
   width: 80%;
   height: 80%;
-  /* background-color: grey; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -349,62 +281,43 @@
 .project-imgBox {
   width: 50%;
   height: 80%;
-  /* background-color: bisque; */
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* .project-imgBox img {
-  width: 500px;
-  height: 300px;
-} */
 .project-textBox {
   width: 50%;
   height: 80%;
-  /* background-color: white; */
   flex-direction: column;
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 .project-text {
   width: 100%;
-  /* background-color: grey; */
-  /* font-family: "Noto Sans KR", serif; */
 }
 .project-text-common{
   font-size: 17px;
   margin-bottom: 5px;
-  /* margin-bottom: 20px; */
 }
 .project-text-common span {
   color: rgb(127, 142, 240);
-  /* font-family: " monospace", serif; */
   font-weight: 800;
   margin-right: 10px;
 }
 .project-about-div {
-  /* width: 100%; */
   padding: 20px;
   margin-top: 20px;
   border-radius: 20px;
   background-color: #F4F4F4;
 }
 .project-about {
-  /* padding-bottom: 10px; */
-  /* margin-bottom: 10px; */
   line-height: 30px;
 }
 .project-imgBox p {
   font-size: 30px;
-  /* letter-spacing: 2px; */
-  /* font-family: "Black Han Sans", serif; */
-  /* font-family: "Noto Sans KR", serif; */
-  /* font-family: monospace; */
-  font-weight: 700;
-  /* border-width: 2px; */
-  
+  font-weight: 700;  
 }
 .project-imgBox-number {
   font-size: 35px;
@@ -415,7 +328,6 @@
 .project-link {
   width: 100%;
   height: 50px;
-  /* background-color: grey; */
   display: flex;
   justify-content: center;
   align-items: center;

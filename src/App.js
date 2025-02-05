@@ -2,7 +2,7 @@ import './App.css';
 import { useState, useEffect, useCallback, useRef } from 'react';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MdOutlineMail, MdComputer,MdModeNight, MdWbSunny } from "react-icons/md";
+import { MdOutlineMail, MdComputer, MdModeNight, MdWbSunny } from "react-icons/md";
 
 import { FaGithub, FaSchool, FaPencilAlt, FaMousePointer, FaCertificate } from "react-icons/fa";
 import { FaCakeCandles } from "react-icons/fa6";
@@ -13,14 +13,14 @@ function App() {
 
 
   // ------------------ 메인 화면 ----------------
-  const MainContainer = ({darkLightClick}) => {
+  const MainContainer = ({ darkLightClick }) => {
     return (
-      <div className="main-container"  style={ darkLightClick ? { backgroundColor: "rgb(26, 28, 48)"} : {backgroundColor: "white"}}>
-        <div className="main-circle" style={ darkLightClick ? { background: "linear-gradient(to left,rgb(38, 46, 87),rgb(239, 248, 255))"} : {background: "linear-gradient(to top, #a0a7ca, #fcfafe)"}}></div>
+      <div className="main-container" style={darkLightClick ? { backgroundColor: "rgb(26, 28, 48)" } : { backgroundColor: "white" }}>
+        <div className="main-circle" style={darkLightClick ? { background: "linear-gradient(to left,rgb(38, 46, 87),rgb(239, 248, 255))" } : { background: "linear-gradient(to top, #a0a7ca, #fcfafe)" }}></div>
         <div className="main-text">
-          <p className="main-name"  style={ darkLightClick ? { color: "rgb(229, 232, 253)"} : {color: "rgb(127, 142, 240)"}}><span>C</span>HOI <span>J</span>IYOUNG</p>
-          <p className="main-front" style={ darkLightClick ? { color: "rgb(229, 232, 253)"} : {color: "rgb(127, 142, 240)"}}>Front-end Developer</p>
-          <p className="main-portfolio" style={ darkLightClick ? { color: "rgb(229, 232, 253)"} : {color: "rgb(127, 142, 240)"}}>Portfolio</p>
+          <p className="main-name" style={darkLightClick ? { color: "rgb(229, 232, 253)" } : { color: "rgb(127, 142, 240)" }}><span>C</span>HOI <span>J</span>IYOUNG</p>
+          <p className="main-front" style={darkLightClick ? { color: "rgb(229, 232, 253)" } : { color: "rgb(127, 142, 240)" }}>Front-end Developer</p>
+          <p className="main-portfolio" style={darkLightClick ? { color: "rgb(229, 232, 253)" } : { color: "rgb(127, 142, 240)" }}>Portfolio</p>
         </div>
       </div>
     )
@@ -28,7 +28,7 @@ function App() {
 
 
   // ------------------ 자기소개 화면 ----------------
-  const AboutContainer = ({darkLightClick}) => {
+  const AboutContainer = ({ darkLightClick }) => {
 
     const [isIntroVisible, setIsIntroVisible] = useState(false);
     const [isTextVisible, setIsTextVisible] = useState(false);
@@ -75,8 +75,8 @@ function App() {
       setImg(null);
     }
     return (
-      <div className="about-container" style={ darkLightClick ? { backgroundColor: "rgb(26, 28, 48)", color: "white"} : {backgroundColor: "white"}}>
-        <p className="about-me" style={ darkLightClick ? { color: "rgb(226, 240, 253)"} : {}}>ABOUT ME</p>
+      <div className="about-container" style={darkLightClick ? { backgroundColor: "rgb(26, 28, 48)", color: "white" } : { backgroundColor: "white" }}>
+        <p className="about-me" style={darkLightClick ? { color: "rgb(226, 240, 253)" } : {}}>ABOUT ME</p>
         <motion.div
           ref={introRef}
           initial={{ opacity: 0, y: 100 }}
@@ -212,7 +212,7 @@ function App() {
 
 
   // ------------------ 프로젝트 소개 화면 ----------------
-  const ProjectContainer = ({ project,darkLightClick }) => {
+  const ProjectContainer = ({ project, darkLightClick }) => {
 
     const [isProjectVisible, setIsProjectVisible] = useState(false);
     const project1Ref = useRef(null);
@@ -238,8 +238,8 @@ function App() {
     }, []);
 
     return (
-      <div className="project-container" style={ darkLightClick ? { backgroundColor: "rgb(26, 28, 48)", color: "white"} : {backgroundColor: "white"}}>
-        <p className="project-sideText" style={ darkLightClick ? { color: "rgb(226, 240, 253)"} : {}}>PROJECT #{project.number}</p>
+      <div className="project-container" style={darkLightClick ? { backgroundColor: "rgb(26, 28, 48)", color: "white" } : { backgroundColor: "white" }}>
+        <p className="project-sideText" style={darkLightClick ? { color: "rgb(226, 240, 253)" } : {}}>PROJECT #{project.number}</p>
         <motion.div
           ref={project1Ref}
           initial={{ opacity: 0, y: 100 }}
@@ -258,13 +258,13 @@ function App() {
               <p className="project-text-common"><span># 개발자</span>{project.developer}</p>
               <p className="project-text-common"><span># 개발기간</span>{project.date}</p>
               <p className="project-text-common"><span># 사용기술</span>{project.skill}</p>
-              <div className="project-about-div" style={ darkLightClick ? {color: "black"} : {}}>
+              <div className="project-about-div" style={darkLightClick ? { color: "black" } : {}}>
                 <p className="project-about">{project.description}</p>
               </div>
             </div>
             <div className="project-link">
-              <a href={project.github} target="_blank"><FaGithub size="30" className="project-link-icon" style={ darkLightClick ? { color: "white"} : {}}></FaGithub></a>
-              <a href={project.projectLink} target="_blank"><MdComputer size="30" className="project-link-icon" style={ darkLightClick ? { color: "white"} : {}}></MdComputer></a>
+              <a href={project.github} target="_blank"><FaGithub size="30" className="project-link-icon" style={darkLightClick ? { color: "white" } : {}}></FaGithub></a>
+              <a href={project.projectLink} target="_blank"><MdComputer size="30" className="project-link-icon" style={darkLightClick ? { color: "white" } : {}}></MdComputer></a>
             </div>
           </div>
         </motion.div>
@@ -273,23 +273,32 @@ function App() {
   }
 
 
+  // ------------------ Footer ----------------
+  const Footer = () => {
+    return (
+      <div className="footer-container">
+        <p>© 2025.02 CHOI JIYOUNG Portfolio</p>
+      </div>
+    )
+  }
+
   const [darkLightClick, setDarkLightClick] = useState(false);
   const [darkLightIcon, setDarkLightIcon] = useState(<MdWbSunny></MdWbSunny>);
-    const darkLightToggle = () => {
-      setDarkLightClick(!darkLightClick);
-      if (darkLightClick) { // 버튼클릭시 darkLightClick은 true가 되어 다크모드가 됨.
-        setDarkLightIcon(<MdModeNight></MdModeNight>);
-      } else {
-        setDarkLightIcon(<MdWbSunny></MdWbSunny>);
-      }
-
+  const darkLightToggle = () => {
+    setDarkLightClick(!darkLightClick);
+    if (darkLightClick) { // 버튼클릭시 darkLightClick은 true가 되어 다크모드가 됨.
+      setDarkLightIcon(<MdModeNight></MdModeNight>);
+    } else {
+      setDarkLightIcon(<MdWbSunny></MdWbSunny>);
     }
-    
+
+  }
+
   return (
     <div className="container">
       <div className="darkLight-container" onClick={darkLightToggle}>
-        <div className="darkLight-btn" style={darkLightClick ? {backgroundColor: "white"} : {}}>
-          <div className="darkLight-btn-Icon" style={darkLightClick ? {color: "rgb(33, 63, 92)"} : {}}>{darkLightIcon}</div>
+        <div className="darkLight-btn" style={darkLightClick ? { backgroundColor: "white" } : {}}>
+          <div className="darkLight-btn-Icon" style={darkLightClick ? { color: "rgb(33, 63, 92)" } : {}}>{darkLightIcon}</div>
         </div>
       </div>
       <MainContainer darkLightClick={darkLightClick}></MainContainer>
@@ -297,6 +306,7 @@ function App() {
       {projectData.map((project) => (
         <ProjectContainer darkLightClick={darkLightClick} key={project.number} project={project}></ProjectContainer>
       ))}
+      <Footer></Footer>
     </div>
   );
 }

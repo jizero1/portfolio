@@ -190,11 +190,11 @@ function App() {
       number: 3,
       name: "하루 토마토🍅",
       developer: "최지영",
-      date: "2025.01.09 ~ 진행중",
+      date: "2025.01.09 ~ 진행중(비공개 테스트 통과 후, 출시예정)",
       skill: "React Native / JavaScript",
       description: "할일 추가 및 체크기능으로 할일을 간단하게 관리할 수 있고, 중요한 할일은 인덱스로 표시해주어 체계적으로 일정 관리가 가능합니다. 또한, 5가지의 색상과 표정의 기분 아이콘을 통해 하루의 기분을 표시할 수 있습니다.",
       image: "./img/project3.png",
-      projectLink: "",
+      projectLink: "https://play.google.com/store/apps/details?id=com.jizerotodo",
       github: "https://github.com/jizero1/todo",
     },
     {
@@ -202,10 +202,10 @@ function App() {
       name: "포트폴리오",
       developer: "최지영",
       date: "2025.01.24 ~ 진행중",
-      skill: "React, css",
-      description: "",
-      image: "",
-      projectLink: "",
+      skill: "JavaScript / React / CSS / Framer Motion",
+      description: "자기소개 및 개인 프로젝트 설명을 위해 제작한 포트폴리오 웹사이트입니다. React와 Framer Motion을 활용하여 동적인 애니메이션과 효과를 구현하였습니다. 페이지 스크롤 할때마다 부드럽게 등장하는 콘텐츠와 다크모드 및 라이드모드를 지원하는 기능을 통해 사용자경험을 극대화 하였습니다.",
+      image: "./img/project4.png",
+      projectLink: "https://jizero1.github.io/portfolio/",
       github: "https://github.com/jizero1/portfolio",
     }
   ]

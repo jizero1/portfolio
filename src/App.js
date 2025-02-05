@@ -239,7 +239,7 @@ function App() {
 
     return (
       <div className="project-container" style={darkLightClick ? { backgroundColor: "rgb(26, 28, 48)", color: "white" } : { backgroundColor: "white" }}>
-        <p className="project-sideText" style={darkLightClick ? { color: "rgb(226, 240, 253)" } : {}}>PROJECT #{project.number}</p>
+        <p className={`project-sideText project${project.number}`} style={darkLightClick ? { color: "rgb(226, 240, 253)" } : {}}>PROJECT #{project.number}</p>
         <motion.div
           ref={project1Ref}
           initial={{ opacity: 0, y: 100 }}
@@ -250,9 +250,9 @@ function App() {
 
           <div className="project-imgBox">
             <p className="project-imgBox-number">#{project.number}</p>
-            <a href={project.projectLink} target="_blank"><img src={project.image}></img></a>
+            <a href={project.projectLink} target="_blank"><img src={project.image} className={`project-img${project.number}`}></img></a>
           </div>
-          <div className="project-textBox">
+          <div className={`project-textBox project-textBox${project.number}`}>
             <div className="project-text">
               <p className="project-text-common"><span># 프로젝트명</span>{project.name}</p>
               <p className="project-text-common"><span># 개발자</span>{project.developer}</p>

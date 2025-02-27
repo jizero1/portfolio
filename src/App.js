@@ -151,11 +151,11 @@ function App() {
               이를 실현하기 위해 <strong>스마트미디어학과</strong>를 복수 전공하며 개발에 대한 이해를 쌓았습니다.
               <br></br>
               <br></br>
-              꾸준히 <strong>성장</strong>하고 새로운 것에 <strong>도전</strong>하는 것을 좋아하여
-              최근에는 React Native를 독학으로 배우고,
-              Play Store에 앱을 등록하고 비공개 테스트 심사를 진행 중입니다.
-              사용자 경험을 고려한 실용적이고 효율적인 개발을 통해 꾸준히 성장하는
-              프론트엔드 개발자가 되겠습니다.
+              꾸준히 <strong>성장</strong>하고 새로운 것에 <strong>도전</strong>하는 것을 좋아합니다.
+              최근에는 웹 뿐만 아니라 앱 개발에도 도전 해보고 싶어서 React Native를 학습 하게 되었고,
+              play store에 [하루토마토]라는 앱을 출시 완료 하였습니다.
+              문제에 직면했을때는 회피 하기보다는 문제의 원인을 찾고 해결하는 것을 좋아합니다.
+              앞으로도 계속해서 기술적 역량을 쌓아가며, 끊임없이 발전하여 새로운 기회를 만들어가는 개발자가 되도록 하겠습니다.
             </p>
           </div>
         </motion.div>
@@ -168,7 +168,7 @@ function App() {
       number: 1,
       name: "실시간 날씨 🌤",
       developer: "최지영",
-      date: "2024.12.29 ~ 2025.01.04",
+      date: "2024.12 ~ 2025.01",
       skill: "HTML / CSS / JavaScript / Node.js",
       description: "OpenWeather API를 이용하여 실시간으로 날씨정보를제공받아 사용자의 위치 기반으로 날씨정보를 표시합니다. 사용자의 이해를 돕기 위해 날씨 상태코드에 맞게 날씨 이모티콘을 적절하게 표시하고, 날씨 텍스트(ex.맑음)도 추가했습니다. node.js를 이용하여 실시간으로 날씨정보를 제공하는 서버를 구축 했고, vercel을 통해 배포를 완료 하였습니다.",
       image: "./img/project1.png",
@@ -179,7 +179,7 @@ function App() {
       number: 2,
       name: "달력 일기 📝",
       developer: "최지영",
-      date: "2024.12.17 ~ 2025.12.26",
+      date: "2024.12 ~ 2025.12",
       skill: "HTML / CSS / JavaScript",
       description: "달력의 기본 기능인 현재 날짜 확인, 이전달/다음달 이동 뿐만 아니라 해당 날짜를 클릭하면 이미지와 메모를 작성 할 수 있습니다. 또한, 입력된 내용들은 localStorage에 저장되어 페이지를 새로고침 하더라도 계속해서 확인이 가능 합니다.",
       image: "./img/project2.png",
@@ -190,7 +190,7 @@ function App() {
       number: 3,
       name: "하루 토마토🍅",
       developer: "최지영",
-      date: "2025.01.09 ~ 진행중(비공개 테스트 통과 후, 출시예정)",
+      date: "2025.01 ~ 2025.02",
       skill: "React Native / JavaScript",
       description: "할일 추가 및 체크기능으로 할일을 간단하게 관리할 수 있고, 중요한 할일은 인덱스로 표시해주어 체계적으로 일정 관리가 가능합니다. 또한, 5가지의 색상과 표정의 기분 아이콘을 통해 하루의 기분을 표시할 수 있습니다.",
       image: "./img/project3.png",
@@ -201,7 +201,7 @@ function App() {
       number: 4,
       name: "포트폴리오",
       developer: "최지영",
-      date: "2025.01.24 ~ 진행중",
+      date: "2025.01 ~ 진행중",
       skill: "JavaScript / React / CSS / Framer Motion",
       description: "자기소개 및 개인 프로젝트 설명을 위해 제작한 포트폴리오 웹사이트입니다. React와 Framer Motion을 활용하여 동적인 애니메이션과 효과를 구현하였습니다. 페이지 스크롤 할때마다 부드럽게 등장하는 콘텐츠와 다크모드 및 라이드모드를 지원하는 기능을 통해 사용자경험을 극대화 하였습니다.",
       image: "./img/project4.png",
